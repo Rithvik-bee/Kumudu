@@ -13,6 +13,9 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+  res.send("Welcome to Kumudu Software Solutions...")
+})
 app.use('/users', authRoutes);
 app.use('/tasks', taskRoutes);
 
